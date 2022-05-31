@@ -5,7 +5,6 @@
   "main": "public/index.html",
   "author": "chupidev",
   "scripts": {
-    "install": "npm -y install",
     "build:sass": "sass  --no-source-map src/sass:public/css",
     "copy:html": "copyfiles -u 1 ./src/*.html public",
     "copy:js": "copyfiles -u 1 ./src/js/*.js public",
