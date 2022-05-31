@@ -1,0 +1,10 @@
+@mixin google-font($font) {
+    $font: unquote($font);
+    @import url(https://fonts.googleapis.com/css?family=#{$font});
+}
+
+@mixin media-desktop {
+    @media screen and (min-width: 900px) {
+        @content;
+    }
+}

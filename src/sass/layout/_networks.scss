@@ -1,0 +1,16 @@
+.networks {
+    isolation: isolate;
+    font-size: 2rem;
+    display: flex;
+    flex-flow: column;
+    row-gap: 1rem;
+    max-width: 35ch;
+    // border: red solid 3px;
+    //    margin-inline: auto;
+
+    @include media-desktop {
+        flex-flow: row;
+        justify-content: space-between;
+        margin-top: 5rem;
+    }
+}

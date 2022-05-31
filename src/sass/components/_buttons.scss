@@ -1,0 +1,29 @@
+.btn {
+    text-decoration: none;
+    text-align: center;
+    color: $white;
+    display: inline-block;
+    padding: .2em 1em;
+    background-color: $accent-dark;
+    border-radius: .2em;
+    box-shadow: black 2px 2px 3px;
+}
+
+.tiktok {
+    background-color: $black;
+    font-family: 'Montserrat Alternates';
+    font-style: normal;
+    font-weight: 600;
+}
+
+.insta {
+    background: $insta-gradient;
+    font-family: 'Grand Hotel', cursive;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.face {
+    font-style: normal;
+    font-weight: 600;
+}

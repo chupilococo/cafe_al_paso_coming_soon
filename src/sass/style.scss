@@ -1,0 +1,41 @@
+@import "vendor/normalize";
+@import "abstracts/mixins";
+@import "abstracts/colors";
+
+@include google-font("Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900");
+@include google-font("Montserrat+Alternates:ital,wght@0,100;0,600;1,100");
+@include google-font("Grand+Hotel");
+
+:root {
+    --gradientStart:#{$gradient-start};
+    --gradientStop: #{$gradient-stop};
+}
+
+@include media-desktop {
+    :root {
+        --gradientStart:#{$accent-light};
+        --gradientStop: #{$accent-dark};
+    }
+}
+
+@import 'layout/body';
+@import 'layout/background';
+@import 'components/buttons';
+@import 'layout/main';
+@import 'layout/networks';
+
+h1 {
+    display: inline-block;
+    font-family: 'Roboto';
+    font-style: black;
+    font-weight: 900;
+    font-size: 3rem;
+    line-height: 2.5rem;
+    color: $text-400;
+    text-align: center;
+    margin-inline: 1ch 5ch;
+
+    @include media-desktop {
+        margin-top: 20vh;
+    }
+}
