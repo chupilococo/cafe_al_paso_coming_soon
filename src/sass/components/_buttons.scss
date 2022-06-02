@@ -9,21 +9,21 @@
     box-shadow: black 2px 2px 3px;
 }
 
-.tiktok {
+[data-network="tiktok"] {
     background-color: $black;
     font-family: 'Montserrat Alternates';
     font-style: normal;
     font-weight: 600;
 }
 
-.insta {
+[data-network="instagram"] {
     background: $insta-gradient;
     font-family: 'Grand Hotel', cursive;
     font-style: normal;
     font-weight: 400;
 }
 
-.face {
+[data-network="facebook"] {
     font-style: normal;
     font-weight: 600;
 }

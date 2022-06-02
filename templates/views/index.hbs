@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" href="data:image/svg+xml,
         <svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22>
             <text y=%22.9em%22 font-size=%2290%22>
@@ -37,25 +37,16 @@
             Te invitamos a que nos sigas en nuestras redes para enterarte todas las noticias de tu cafetería preferida.
         </p>
     </div>
+{{!--     <div class="networks">
+        <a class="btn" data-network="tiktok"  href="#">tiktok</a>
+        <a class="btn"  data-network="instagram"  href="">Instagram</a>
+        <a class="btn"   data-network="facebook"  href="">facebook</a>
+    </div> --}}
     <div class="networks">
-        <a class="btn tiktok" href="#">tiktok</a>
-        <a class="btn insta" href="">Instagram</a>
-        <a class="btn face" href="">facebook</a>
+        {{#each networks}}
+        <a class="btn" data-network="{{this.name}}" href="{{this.endpoint}}">{{this.name}}</a>
+        {{/each}}
     </div>
-
-
-    <!-- 
-    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
-    <script>
-        const darkmode = new Darkmode();
-        window.addEventListener('load', () => {
-            darkmode.toggle();
-            console.log(darkmode.isActivated())
-        });
-    </script>
-
-
-    -->
 </body>
 
 </html>

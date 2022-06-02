@@ -20,18 +20,27 @@ hbs.registerPartials(partialsPath)
 // Setup static directory to serve
 app.use(express.static(publicDirectoryPath))
 
+const networks= [
+    { name:"facebook", endpoint:"https://facebook.com/cafealpasotl"},
+    { name: "instagram", endpoint:"https://instagram.com/cafealpasotl"},
+    { name: "tiktok", endpoint:"https://tiktok.com/cafealpasotl"}
+];
+
 app.get('', (req, res) => {
     res.render('index', {
-        title:"Caf&eacute; al Paso & Bebidas"
+        title:"Café al Paso & Bebidas",
+        networks
     })
 })
 
 app.get('*', (req, res) => {
     res.render('index', {
-        title: 'No encontramos la pagina que buscabas.'
+        title: 'No encontramos la pagina que buscabas.',
+        networks
     })
 })
 
 app.listen(port, () => {
+
     console.log(`Server is up on port ${port}.`)
 })

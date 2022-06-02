@@ -5,8 +5,6 @@
     flex-flow: column;
     row-gap: 1rem;
     max-width: 35ch;
-    // border: red solid 3px;
-    //    margin-inline: auto;
 
     @include media-desktop {
         flex-flow: row;

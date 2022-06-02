@@ -1,4 +1,5 @@
 {
+  "start": "node src/app.js",
   "name": "project",
   "version": "0.1.0",
   "description": "SASS compile|autoprefix|minimize and live-reload dev server using Browsersync for static HTML",
@@ -10,16 +11,17 @@
     "copy:img": "copyfiles -u 1 ./src/imgs/*.* public",
     "copy": "npm-run-all --parallel copy:*",
     "watch:js": "onchange  \"src/js/*.js\" -- npm run copy:js",
+    "watch:hbs": "onchange  \"src/templates/**/*.hbs\" -- npm run copy:js",
     "watch:sass": "sass  --no-source-map --watch src/sass:public/css",
     "watch": "npm-run-all --parallel watch:*",
-    "serve": "browser-sync start --server public --files public",
+    "serve":"nodemon src/app.js -e hbs,scss,js",
     "build": "npm-run-all build:*",
     "postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map",
-    "start-dev": "npm-run-all copy --parallel watch serve",
     "commit":"git commit -am \"autocommit\" ",
     "deploy:heroku":"git push heroku master",
     "deploy:github":"git push origin master",
-    "start": "node src/app.js"
+    "deploy":"npm-run-all build --parallel deploy:*",
+    "start-dev": "npm-run-all copy --parallel watch serve"
   },
   "dependencies": {
     "express": "^4.18.1",
