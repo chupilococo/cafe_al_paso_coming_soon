@@ -16,12 +16,15 @@ const partialsPath = path.join(__dirname, '../templates/partials')
 app.set('view engine', 'hbs')
 app.set('views', viewsPath)
 hbs.registerPartials(partialsPath)
+hbs.registerHelper('lowerCase', (str) => str.toLowerCase())
 
 // Setup static directory to serve
 app.use(express.static(publicDirectoryPath))
 
 const networks= [
-    { name: "instagram", endpoint:"https://instagram.com/cafealpasotl"}
+    { name: "Instagram", endpoint:"https://instagram.com/cafealpasotl"},
+    { name: "Facebook", endpoint:"https://instagram.com/cafealpasotl"},
+    { name: "tiktok", endpoint:"https://instagram.com/cafealpasotl"},
 ];
 
 app.get('', (req, res) => {
