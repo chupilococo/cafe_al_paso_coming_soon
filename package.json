@@ -6,6 +6,7 @@
   "main": "public/index.html",
   "author": "chupidev",
   "scripts": {
+    "start": "node src/app.js",
     "build:sass": "sass  --no-source-map src/sass:public/css",
     "copy:js": "copyfiles -u 1 ./src/js/*.js public",
     "copy:img": "copyfiles -u 1 ./src/imgs/*.* public",
