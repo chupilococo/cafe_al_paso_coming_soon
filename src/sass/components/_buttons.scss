@@ -3,10 +3,13 @@
     text-align: center;
     color: $white;
     display: inline-block;
-    padding: .4em 1em;
+    padding: 1rem 0;
     background-color: $accent-dark;
     border-radius: .2em;
     box-shadow: black 2px 2px 3px;
+        @include media-desktop {
+                padding: 2rem 4rem;
+            }
 }
 
 [data-network="tiktok"] {
