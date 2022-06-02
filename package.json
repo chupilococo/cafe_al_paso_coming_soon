@@ -21,7 +21,7 @@
     "commit":"git commit -am \"autocommit\" ",
     "deploy:heroku":"git push heroku master",
     "deploy:github":"git push origin master",
-    "deploy":"npm-run-all build --parallel deploy:*",
+    "deploy":"npm-run-all build commit --parallel deploy:*",
     "start-dev": "npm-run-all copy --parallel watch serve"
   },
   "dependencies": {

@@ -1,0 +1,14 @@
+h1 {
+    display: inline-block;
+    font-family: 'Roboto';
+    font-weight: 900;
+    line-height: 4rem;
+    font-size: 3rem;
+    color: $text-600;
+    
+    @include media-desktop {
+        line-height: 6rem;
+        text-align: center;
+        font-size: 6rem;
+    }
+}
