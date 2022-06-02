@@ -1,3 +1,5 @@
+//C:\Users\dcarena\Documents\proyectos\cursos\node\mongodb\bin\mongod.exe --dbpath=C:\Users\dcarena\Documents\proyectos\cursos\node\mogodb-data
+
 const path = require('path')
 const express = require('express')
 const hbs = require('hbs')
