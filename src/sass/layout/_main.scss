@@ -1,8 +1,16 @@
 .main {
-    color: $text-600;
+    color: $text-400;
     text-align: center;
-    line-height: 2rem;
+    line-height: 2.5rem;
+    padding: 3rem;
     font-weight: 500;
-    font-size: 1.2rem;
-    max-width: 60ch;
+    font-size: 2rem;
+    display: block;
+    max-width: 100vw;
+
+
+    @include media-desktop {
+        margin-inline: auto 45vw;
+        height: 100%;
+    }
 }

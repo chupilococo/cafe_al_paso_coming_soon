@@ -21,9 +21,7 @@ hbs.registerPartials(partialsPath)
 app.use(express.static(publicDirectoryPath))
 
 const networks= [
-    { name:"facebook", endpoint:"https://facebook.com/cafealpasotl"},
-    { name: "instagram", endpoint:"https://instagram.com/cafealpasotl"},
-    { name: "tiktok", endpoint:"https://tiktok.com/cafealpasotl"}
+    { name: "instagram", endpoint:"https://instagram.com/cafealpasotl"}
 ];
 
 app.get('', (req, res) => {

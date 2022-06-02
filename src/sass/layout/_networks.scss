@@ -4,11 +4,12 @@
     display: flex;
     flex-flow: column;
     row-gap: 1rem;
-    max-width: 35ch;
-
+    max-width: 100%;
+    font-size: 4rem;
+    margin-top: 6rem;
     @include media-desktop {
         flex-flow: row;
-        justify-content: space-between;
+        justify-content: space-around;
         margin-top: 5rem;
     }
 }

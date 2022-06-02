@@ -21,21 +21,7 @@
 @import 'layout/body';
 @import 'layout/background';
 @import 'components/buttons';
+@import 'components/title';
 @import 'layout/main';
 @import 'layout/networks';
 
-h1 {
-    display: inline-block;
-    font-family: 'Roboto';
-    font-style: black;
-    font-weight: 900;
-    font-size: 3rem;
-    line-height: 2.5rem;
-    color: $text-400;
-    text-align: center;
-    margin-inline: 1ch 5ch;
-
-    @include media-desktop {
-        margin-top: 20vh;
-    }
-}
